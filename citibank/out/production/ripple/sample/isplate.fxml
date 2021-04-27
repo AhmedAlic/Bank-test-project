@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="749.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5; -fx-position-shape: center;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller_isplate">
+   <children>
+      <Label layoutX="17.0" layoutY="18.0" text="Isplate za period grupisane po" textFill="#3030f2">
+         <font>
+            <Font name="Arial" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="70.0" prefHeight="21.0" prefWidth="513.0" text="Unesite početni datum za izvještaj..............................................." textFill="#3030f2">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="124.0" prefHeight="21.0" prefWidth="513.0" text="Unesite završni datum za izvještaj..............................................." textFill="#3030f2">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="168.0" prefHeight="21.0" prefWidth="321.0" text="Grupiši po (1).........................................." textFill="#3030f2">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="217.0" prefHeight="21.0" prefWidth="321.0" text="Grupiši po (2).........................................." textFill="#3030f2">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="39.0" fitWidth="164.0" layoutX="599.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../logo.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="pocetniDatum_tipka" layoutX="553.0" layoutY="70.0" />
+      <DatePicker fx:id="zavrsniDatum_tipka" layoutX="553.0" layoutY="122.0" />
+      <ChoiceBox fx:id="grupisi1_tipka" layoutX="362.0" layoutY="166.0" prefHeight="25.0" prefWidth="272.0" />
+      <ChoiceBox fx:id="grupisi2_tipka" layoutX="363.0" layoutY="215.0" prefHeight="25.0" prefWidth="271.0" />
+      <Line endX="620.0" layoutX="118.0" layoutY="56.0" startX="-107.0" />
+      <Line endX="630.0" layoutX="110.0" layoutY="418.0" startX="-100.0" />
+      <TableView fx:id="isplateMK1_tabela" layoutX="4.0" layoutY="276.0" prefHeight="129.0" prefWidth="367.0">
+        <columns>
+          <TableColumn fx:id="brojMK1_kolona" prefWidth="92.0" text="Broj isplacenih MK" />
+          <TableColumn fx:id="maxMK1_kolona" prefWidth="92.0" text="Max isplacenih MK" />
+            <TableColumn fx:id="sumaMK1_kolona" prefWidth="92.0" text="Suma isplacenih MK" />
+            <TableColumn fx:id="prosjekMK1_kolona" minWidth="100.0" prefWidth="92.0" text="Prosjek isplacenih MK" />
+        </columns>
+      </TableView>
+      <TableView fx:id="isplateMK2_tabela" layoutX="370.0" layoutY="276.0" prefHeight="129.0" prefWidth="375.0">
+         <columns>
+            <TableColumn fx:id="brojMK2_kolona" prefWidth="92.0" text="Broj isplacenih MK" />
+            <TableColumn fx:id="maxMK2_kolona" prefWidth="92.0" text="Max isplacenih MK" />
+            <TableColumn fx:id="sumaMK2_kolona" prefWidth="92.0" text="Suma isplacenih MK" />
+            <TableColumn fx:id="prosjekMK2_kolona" minWidth="100.0" prefWidth="92.0" text="Prosjek isplacenih MK" />
+         </columns>
+      </TableView>
+      <Label layoutX="55.0" layoutY="430.0" text="Napusti">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="650.0" layoutY="430.0" text="Uradi izvještaj">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="253.0" text="Grupa 1" textFill="#4d4d4c">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="515.0" layoutY="253.0" text="Grupa 2" textFill="#4d4d4c">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="napustiIsplata_tipka" layoutX="11.0" layoutY="423.0" mnemonicParsing="false" onMouseClicked="#prijelaz5Action" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image005.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="610.0" layoutY="422.0" mnemonicParsing="false" onAction="#uradiIzvjestaj" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image008.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</Pane>
